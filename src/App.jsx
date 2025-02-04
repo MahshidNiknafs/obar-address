@@ -1,5 +1,29 @@
+import { BrowserRouter, Routes, Route, Navigate } from "react-router";
+
+import AppLayout from "./ui/AppLayout";
+import CreateAddressPage from "./pages/CreateAddressPage";
+import AddressesPage from "./pages/AddressesPage";
+
+const routes = [
+	{ path: "/create-address", element: <CreateAddressPage /> },
+	{ path: "/addresses", element: <AddressesPage /> },
+];
+
 function App() {
-	return <div>App</div>;
+	return (
+		<BrowserRouter>
+			<Routes>
+				<Route element={<AppLayout />}>
+					<Route index element={<Navigate replace to="/create-address" />} />
+					{routes.map((route) => (
+						<Route key={route.path} path={route.path} element={route.element} />
+					))}
+
+					<Route path="/create-address" element={<CreateAddressPage />} />
+				</Route>
+			</Routes>
+		</BrowserRouter>
+	);
 }
 
 export default App;
