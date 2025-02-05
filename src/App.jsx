@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router";
+import "./App.css";
 
-import AppLayout from "./ui/AppLayout";
+import AppLayout from "./ui/AppLayout/AppLayout";
 import CreateAddressPage from "./pages/CreateAddressPage";
 import AddressesPage from "./pages/AddressesPage";
 

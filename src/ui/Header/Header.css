@@ -1,0 +1,12 @@
+.layout-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--color-white);
+	color: var(--color-white);
+	padding: 2rem 5rem;
+
+	box-shadow: 0 0.5px 2px var(--color-shadow);
+
+	height: 74px;
+}

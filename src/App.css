@@ -1,13 +1,38 @@
+@font-face {
+	font-family: "Vazir";
+	src: url("../assets/fonts/Vazir.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+	color: var(--color-text);
+}
+
 :root {
+	--font-primary: "Vazir", sans-serif;
+	font-size: 14px;
+	line-height: 21.88px;
+
 	--color-primary: #00bfa5;
 	--color-secondary: #e61236;
-	--color-gray: #9b9b9b;
+
 	--color-text: #37474f;
 	--color-border: #d4d4d4;
+	--color-shadow: #00000026;
+
+	--color-gray: #9b9b9b;
+	--color-white: #fff;
 }
 
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+}
+
+html {
+	direction: rtl;
+	text-align: right;
+}
+
+body {
+	font-family: var(--font-primary);
 }
