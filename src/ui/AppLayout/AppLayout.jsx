@@ -1,17 +1,14 @@
-import { Outlet } from "react-router";
 import Header from "../Header/Header";
+import Main from "../Main/Main";
+import Footer from "../Footer/Footer";
 
 import "./AppLayout.css";
-import Footer from "../Footer/Footer";
 
 function AppLayout() {
 	return (
 		<div className="layout">
 			<Header />
-
-			<main className="layout-main">
-				<Outlet />
-			</main>
+			<Main />
 			<Footer />
 		</div>
 	);
