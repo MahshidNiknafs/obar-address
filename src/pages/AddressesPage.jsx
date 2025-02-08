@@ -1,5 +1,5 @@
 function AddressesPage() {
-	return <div>AddressesPage</div>;
+	return <>AddressesPage</>;
 }
 
 export default AddressesPage;

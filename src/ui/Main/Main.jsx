@@ -4,7 +4,6 @@ import "./Main.css";
 function Main() {
 	return (
 		<main className="layout-main">
-			main layout
 			<Outlet />
 		</main>
 	);

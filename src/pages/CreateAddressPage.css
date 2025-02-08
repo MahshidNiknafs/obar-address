@@ -1,0 +1,20 @@
+.card-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 808px;
+	/* height: 407px; */
+	gap: 1rem;
+}
+
+.card-title {
+	font-size: 1.15rem;
+	font-weight: 400;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 576px) {
+	.card-container {
+		width: 343px;
+	}
+}

@@ -1,4 +1,7 @@
 .layout-main {
-	background-color: var(--color-gray);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--color-bg);
 	overflow: scroll;
 }
