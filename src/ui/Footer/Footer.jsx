@@ -1,10 +1,19 @@
-import "./Footer.css";
+import { useFormContext } from "../../contexts/FormContext";
 import Button from "../Button/Button";
+import "./Footer.css";
 
-function Footer({ onSubmit }) {
+function Footer() {
+	const { handleSubmit } = useFormContext();
+
+	const handleClick = () => {
+		handleSubmit();
+	};
+
 	return (
 		<footer className="layout-footer">
-			<Button onSubmit={onSubmit} />
+			{/* <Button onClick={handleClick}>ثبت و ادامه</Button> */}
+
+			{children}
 		</footer>
 	);
 }
