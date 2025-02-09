@@ -1,0 +1,52 @@
+.submit {
+	width: 224px;
+	color: var(--color-white);
+	background-color: var(--color-primary);
+	border: 1px solid var(--color-primary);
+	border-radius: 4px;
+	padding: 16px 18px;
+	font-weight: 700;
+	font-size: 1.15rem;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.submit:disabled {
+	cursor: not-allowed;
+}
+
+.dots {
+	display: inline-block;
+	position: relative;
+	font-size: 1.2rem;
+	letter-spacing: 3px;
+}
+
+.dots::before,
+.dots::after {
+	content: " ";
+	display: inline-block;
+	animation: dots-animation 1.2s infinite;
+	margin-left: 3px;
+	background-color: var(--color-white);
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+}
+
+@keyframes dots-animation {
+	0%,
+	80%,
+	100% {
+		transform: scale(0);
+	}
+	40% {
+		transform: scale(1);
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.submit {
+		width: 343px;
+	}
+}
