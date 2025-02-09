@@ -39,6 +39,11 @@ body {
 	font-family: var(--font-primary);
 }
 
+.error {
+	color: red;
+	font-size: 12px;
+}
+
 /* @media (max-width: 768px) {
 	html {
 		font-size: 14px;	} */
