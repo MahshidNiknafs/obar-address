@@ -1,17 +1,8 @@
-import { useState } from "react";
 import "./Button.css";
 
-function Button({ onSubmit }) {
-	const [loading, setLoading] = useState(false);
-
-	const handleClick = async () => {
-		setLoading(true);
-		await onSubmit();
-		setLoading(false);
-	};
-
+function Button({ onClick, loading, disabled }) {
 	return (
-		<button className="submit" onClick={handleClick} disabled={loading}>
+		<button className="submit" onClick={onClick} disabled={loading || disabled}>
 			{loading ? <span className="dots"></span> : "ثبت و ادامه"}
 		</button>
 	);
