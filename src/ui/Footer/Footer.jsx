@@ -1,26 +1,32 @@
+// import Button from "../Button/Button";
 import { useFormContext } from "../../contexts/FormContext";
-import Button from "../Button/Button";
+
 import "./Footer.css";
 
 function Footer() {
-	const { handleSubmit } = useFormContext();
+	const { submitAction } = useFormContext();
 
 	const handleClick = () => {
-		handleSubmit();
+		if (submitAction) {
+			submitAction();
+		} else {
+			console.warn("No submit action registered.");
+		}
 	};
 
 	return (
 		<footer className="layout-footer">
-			{/* <Button onClick={handleClick}>ثبت و ادامه</Button> */}
-
-			{children}
+			<button className="submit-button" onClick={handleClick}>
+				تایید
+			</button>
 		</footer>
 	);
 }
-
 export default Footer;
 
-/////////////////////////////////////////////
+/////////////////////////////////////////////'
+// the original
+
 // import Button from "../Button/Button";
 // import "./Footer.css";
 
