@@ -1,13 +1,16 @@
+import { useNavigate } from "react-router";
 import Button from "../Button/Button";
 import { useFormContext } from "../../contexts/FormContext";
 import "./Footer.css";
 
 function Footer() {
 	const { submitAction } = useFormContext();
+	const navigate = useNavigate();
 
 	const handleClick = () => {
 		if (submitAction) {
 			submitAction();
+			navigate("/create-address/set-location");
 		} else {
 			console.warn("No submit action registered.");
 		}
@@ -24,32 +27,3 @@ function Footer() {
 }
 
 export default Footer;
-
-/////////////////////////////////////
-// original before btn
-
-// // import Button from "../Button/Button";
-// import { useFormContext } from "../../contexts/FormContext";
-
-// import "./Footer.css";
-
-// function Footer() {
-// 	const { submitAction } = useFormContext();
-
-// 	const handleClick = () => {
-// 		if (submitAction) {
-// 			submitAction();
-// 		} else {
-// 			console.warn("No submit action registered.");
-// 		}
-// 	};
-
-// 	return (
-// 		<footer className="layout-footer">
-// 			<button className="submit-button" onClick={handleClick}>
-// 				تایید
-// 			</button>
-// 		</footer>
-// 	);
-// }
-// export default Footer;

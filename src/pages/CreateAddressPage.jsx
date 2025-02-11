@@ -1,14 +1,11 @@
 import CreateAddressForm from "../features/address/CreateAddressForm";
-
-import "./CreateAddressPage.css";
+import Card from "../ui/Card/Card";
 
 function CreateAddressPage() {
 	return (
-		<div className="card-container">
-			<div className="card-title">ثبت آدرس</div>
-
+		<Card cardTitle="ثبت آدرس">
 			<CreateAddressForm />
-		</div>
+		</Card>
 	);
 }
 
