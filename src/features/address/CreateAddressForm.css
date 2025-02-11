@@ -1,154 +1,154 @@
 .form-container {
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-	background-color: var(--color-white);
-	padding: 2rem;
-	border: 1px solid var(--color-border);
-	box-shadow: 0px 0px 16px 0px var(--color-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--color-white);
+  padding: 2rem;
+  border: 1px solid var(--color-border);
+  box-shadow: 0px 0px 16px 0px var(--color-shadow);
 }
 
 .form-inputs {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
 
 .form-title {
-	font-size: 1.15rem;
-	font-weight: 700;
+  font-size: 1.15rem;
+  font-weight: 700;
 }
 
 .input-container {
-	display: flex;
-	flex-direction: column;
-	gap: 0.2rem;
-	width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  width: 100%;
 }
 
 .textarea-container {
-	display: flex;
-	flex-direction: column;
-	gap: 0.2rem;
-	grid-column: span 2;
-	width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  grid-column: span 2;
+  width: 100%;
 }
 
 .label-container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .label {
-	font-weight: 500;
-	display: flex;
-	gap: 0.5rem;
+  font-weight: 500;
+  display: flex;
+  gap: 0.5rem;
 }
 
 .input {
-	padding: 8px;
-	border: 1px solid var(--color-border);
-	border-radius: 5px;
-	width: 100%;
-	height: 46px;
+  padding: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  width: 100%;
+  height: 46px;
 }
 
 .optional {
-	font-size: 10px;
-	font-weight: 400;
+  font-size: 10px;
+  font-weight: 400;
 }
 
 .note {
-	color: var(--color-gray);
-	font-size: 10px;
-	font-weight: 400;
+  color: var(--color-gray);
+  font-size: 10px;
+  font-weight: 400;
 }
 
 .textarea {
-	padding: 8px;
-	border: 1px solid var(--color-border);
-	border-radius: 5px;
-	width: 100%;
-	height: 46px;
+  padding: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  width: 100%;
+  height: 46px;
 }
 
 .input::placeholder,
 .textarea::placeholder {
-	color: var(--color-gray);
-	font-family: var(--font-primary);
+  color: var(--color-gray);
+  font-family: var(--font-primary);
 }
 
 .input:focus,
 .textarea:focus {
-	border: 1px solid var(--color-primary);
-	outline: none;
+  border: 1px solid var(--color-primary);
+  outline: none;
 }
 
 .gender-container {
-	display: flex;
-	gap: 5rem;
+  display: flex;
+  gap: 5rem;
 }
 
 .radio-group {
-	display: flex;
-	gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .radio-label {
-	display: flex;
-	gap: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
 }
 
 .radio {
-	appearance: none;
-	width: 16px;
-	height: 16px;
-	border: 2px solid var(--color-border);
-	border-radius: 50%;
-	display: inline-block;
-	position: relative;
-	cursor: pointer;
-	transition: border 0.3s ease, box-shadow 0.3s ease;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--color-border);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
 .radio:checked {
-	border: 1px solid var(--color-primary);
+  border: 1px solid var(--color-primary);
 }
 
 .radio:checked::before {
-	content: "";
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 8px;
-	height: 8px;
-	background-color: var(--color-primary);
-	border-radius: 50%;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 576px) {
-	.form-container {
-		width: 100%;
-		max-width: 343px;
-		padding: 1rem;
-	}
+  .form-container {
+    width: 100%;
+    max-width: 343px;
+    padding: 1rem;
+  }
 
-	.form-inputs {
-		grid-template-columns: 1fr;
-		gap: 1.5rem;
-	}
+  .form-inputs {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 
-	.input-container,
-	.textarea-container {
-		grid-column: span 1;
-		width: 100%;
-	}
+  .input-container,
+  .textarea-container {
+    grid-column: span 1;
+    width: 100%;
+  }
 
-	.input,
-	.textarea {
-		width: 100%;
-	}
+  .input,
+  .textarea {
+    width: 100%;
+  }
 }
