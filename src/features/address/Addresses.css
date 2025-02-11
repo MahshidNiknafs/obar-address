@@ -1,0 +1,47 @@
+.addresses-container {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.address-card {
+	background-color: var(--color-white);
+	padding: 2rem;
+	border: 1px solid var(--color-border);
+	box-shadow: 0px 0px 16px 0px var(--color-shadow);
+	border-radius: 8px;
+}
+
+.address-title {
+	font-size: 1.2rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+
+.address-info {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+}
+
+.info-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.info-label {
+	font-weight: 500;
+	color: var(--color-gray-dark);
+}
+
+.info-value {
+	font-weight: 400;
+	color: var(--color-black);
+}
+
+@media screen and (max-width: 576px) {
+	.address-info {
+		grid-template-columns: 1fr;
+	}
+}
