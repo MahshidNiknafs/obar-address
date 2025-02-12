@@ -6,11 +6,13 @@ import AppLayout from "./ui/AppLayout/AppLayout";
 import CreateAddressPage from "./pages/CreateAddressPage";
 import AddressesPage from "./pages/AddressesPage";
 import LocationPage from "./pages/LocationPage";
+import SuccessPage from "./pages/SuccessPage";
 
 const routes = [
 	{ path: "/create-address", element: <CreateAddressPage /> },
 	{ path: "/addresses", element: <AddressesPage /> },
 	{ path: "/create-address/set-location", element: <LocationPage /> },
+	{ path: "/success", element: <SuccessPage /> },
 ];
 
 function App() {

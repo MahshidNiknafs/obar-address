@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import { MapContainer, TileLayer, Marker, useMapEvents } from "react-leaflet";
 import { useFormContext } from "../../contexts/FormContext";
 import "leaflet/dist/leaflet.css";
@@ -7,6 +8,7 @@ import "./LocationPickerMap.css";
 const LocationPickerMap = () => {
 	const { setSubmitAction, setFormData, formData } = useFormContext();
 	const [position, setPosition] = useState([35.6895, 51.389]);
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		setFormData((prev) => ({ ...prev, location: position }));
@@ -17,7 +19,9 @@ const LocationPickerMap = () => {
 			...formData,
 			location: position,
 		});
-	}, [formData, position]);
+
+		navigate("/success");
+	}, [formData, position, navigate]);
 
 	useEffect(() => {
 		setSubmitAction(() => submitLocation);

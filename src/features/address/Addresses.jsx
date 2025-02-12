@@ -1,30 +1,15 @@
+import useAddresses from "./useAddresses";
 import "./Addresses.css";
 
-const addressData = [
-	{
-		id: 1,
-		firstName: "محمدرضا",
-		lastName: "رضایی",
-		mobileNumber: "09121234567",
-		landlineNumber: "02112345678",
-		address: "تهران، خیابان آزادی، پلاک ۱۰",
-		gender: "مرد",
-	},
-	{
-		id: 2,
-		firstName: "زهرا",
-		lastName: "احمدی",
-		mobileNumber: "09131234567",
-		landlineNumber: "02198765432",
-		address: "مشهد، خیابان امام رضا، پلاک ۲۰",
-		gender: "زن",
-	},
-];
-
 function Addresses() {
+	const { addresses, loading, error } = useAddresses();
+
+	if (loading) return <p>در حال دریافت اطلاعات...</p>;
+	if (error) return <p>{error}</p>;
+
 	return (
 		<div className="addresses-container">
-			{addressData.map((address) => (
+			{addresses.map((address) => (
 				<div key={address.id} className="address-card">
 					<div className="info-item">
 						<span className="info-label">نام</span>
