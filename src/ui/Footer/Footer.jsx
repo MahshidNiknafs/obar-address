@@ -3,7 +3,7 @@ import { useFormContext } from "../../contexts/FormContext";
 import "./Footer.css";
 
 function Footer() {
-	const { submitAction } = useFormContext();
+	const { submitAction, isSubmitting } = useFormContext();
 
 	const handleClick = () => {
 		if (submitAction) {
@@ -15,8 +15,7 @@ function Footer() {
 
 	return (
 		<footer className="layout-footer">
-			{/* <Button onClick={handleClick} loading={loading} disabled={disabled} /> */}
-			<Button onClick={handleClick} />
+			<Button onClick={handleClick} loading={isSubmitting} />
 		</footer>
 	);
 }
