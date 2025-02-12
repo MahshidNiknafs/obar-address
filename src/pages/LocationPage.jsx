@@ -5,7 +5,6 @@ function LocationPage() {
 	return (
 		<Card cardTitle="انتخاب آدرس">
 			<LocationPickerMap />
-			{/* <div style={{ backgroundColor: "red" }}>map</div> */}
 		</Card>
 	);
 }

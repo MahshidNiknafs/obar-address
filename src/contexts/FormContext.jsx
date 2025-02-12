@@ -1,3 +1,25 @@
+import { createContext, useContext, useState } from "react";
+
+const FormContext = createContext();
+
+export function FormProvider({ children }) {
+	const [formData, setFormData] = useState({}); // Add formData state
+	const [submitAction, setSubmitAction] = useState(null);
+
+	return (
+		<FormContext.Provider
+			value={{ formData, setFormData, submitAction, setSubmitAction }}
+		>
+			{children}
+		</FormContext.Provider>
+	);
+}
+
+export function useFormContext() {
+	return useContext(FormContext);
+}
+
+///////////////////////////////
 // import { createContext, useContext, useState } from "react";
 
 // const FormContext = createContext();
@@ -54,21 +76,22 @@
 // 	return useContext(FormContext);
 // }
 ///////////////////////////////////////////////
+// // the original
 
-import { createContext, useContext, useState } from "react";
+// import { createContext, useContext, useState } from "react";
 
-const FormContext = createContext();
+// const FormContext = createContext();
 
-export function FormProvider({ children }) {
-	const [submitAction, setSubmitAction] = useState(null);
+// export function FormProvider({ children }) {
+// 	const [submitAction, setSubmitAction] = useState(null);
 
-	return (
-		<FormContext.Provider value={{ submitAction, setSubmitAction }}>
-			{children}
-		</FormContext.Provider>
-	);
-}
+// 	return (
+// 		<FormContext.Provider value={{ submitAction, setSubmitAction }}>
+// 			{children}
+// 		</FormContext.Provider>
+// 	);
+// }
 
-export function useFormContext() {
-	return useContext(FormContext);
-}
+// export function useFormContext() {
+// 	return useContext(FormContext);
+// }
