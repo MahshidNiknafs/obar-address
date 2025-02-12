@@ -1,19 +1,19 @@
 .card-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 808px;
-  gap: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 808px;
+	gap: 1rem;
+	margin-top: 2rem;
 }
 
 .card-title {
-  font-size: 1.15rem;
-  font-weight: 400;
+	font-size: 1.15rem;
+	font-weight: 400;
 }
 
 @media screen and (max-width: 576px) {
-  .card-container {
-    width: 343px;
-    margin-top: 2rem;
-  }
+	.card-container {
+		width: 343px;
+	}
 }

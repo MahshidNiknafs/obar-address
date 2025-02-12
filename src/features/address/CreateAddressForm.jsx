@@ -13,15 +13,6 @@ function CreateAddressForm() {
 	const { setSubmitAction, setFormData, setIsSubmitting } = useFormContext();
 	const navigate = useNavigate();
 
-	// const onSubmit = useCallback(
-	// 	(data) => {
-	// 		console.log("Form Data:", data);
-	// 		setFormData(data);
-	// 		navigate("/create-address/set-location");
-	// 	},
-	// 	[setFormData, navigate]
-	// );
-
 	const onSubmit = useCallback(
 		async (data) => {
 			setIsSubmitting(true);

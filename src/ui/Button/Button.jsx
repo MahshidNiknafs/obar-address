@@ -17,18 +17,3 @@ function Button({ onClick, loading }) {
 }
 
 export default Button;
-////////////////////////////////////////////
-
-// import "./Button.css";
-
-// // const loading = true;
-
-// function Button({ onClick, loading }) {
-// 	return (
-// 		<button className="submit" onClick={onClick} disabled={loading}>
-// 			{loading ? <span className="dots"></span> : "ثبت و ادامه"}
-// 		</button>
-// 	);
-// }
-
-// export default Button;
